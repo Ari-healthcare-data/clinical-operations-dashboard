@@ -249,26 +249,26 @@ FROM appointments_kpi_provider;
 
 -- Expected Results:
 -- provider_id,  provider_name,	department_name, 	total_appointments,   no_show_count,	no_show_rate_percent"
--- 14	         Pierce, Kendall    Orthopedics	    36	                  3	                8.33
--- 12	         Sullivan, Jamie    Orthopedics	    38	                  8	                21.05
+-- 14	         Pierce, Kendall    Orthopedics	        36	                  3	                8.33
+-- 12	         Sullivan, Jamie    Orthopedics	        38	                  8	                21.05
 -- 9	         Collins, Blair     Cardiology	        44	                  4	                9.09
 -- 3	         Fletcher, Rowan    Primary Care	    61	                  7	                11.48
 -- 10	         Ramirez, Casey     Cardiology	        34	                  5	                14.71
 -- 7	         Turner, Alex       Primary Care	    78	                  10	            12.82
--- 16	         Brooks, Parker     Dermatology	    45	                  9	                20.00
+-- 16	         Brooks, Parker     Dermatology	        45	                  9	                20.00
 -- 5	         Montgomery, Skyler Primary Care	    56	                  13	            23.21
 -- 2	         Lawson, Riley      Primary Care	    77	                  10	            12.99
 -- 1	         Harper, Quinn      Primary Care	    58	                  6	                10.34
 -- 20	         Whitaker, Sloane   Neurology	        38	                  2	                5.26
--- 17	         Blake, Arden       Dermatology	    40	                  2	                5.00
--- 18	         Carter, Jules      Dermatology	    33	                  2	                6.06
+-- 17	         Blake, Arden       Dermatology	        40	                  2	                5.00
+-- 18	         Carter, Jules      Dermatology	        33	                  2	                6.06
 -- 19	         Delgado, Remy      Neurology	        37	                  7	                18.92
--- 13	         Hayes, Jordan      Orthopedics	    39	                  6	                15.38
+-- 13	         Hayes, Jordan      Orthopedics	        39	                  6	                15.38
 -- 11	         Bennett, Dakota    Cardiology	        29	                  3	                10.34
 -- 8	         Dawson, Avery      Primary Care	    63	                  8	                12.70
 -- 6	         Franklin, Taylor   Primary Care	    80	                  12	            15.00
 -- 4	         Bishop, Sawyer     Primary Care	    77	                  8	                10.39
--- 15	         Wallace, Morgan    Dermatology	    38	                  2	                5.26
+-- 15	         Wallace, Morgan    Dermatology	        38	                  2	                5.26
 
 
 
