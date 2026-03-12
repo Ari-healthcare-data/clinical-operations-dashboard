@@ -93,9 +93,8 @@ The dataset_generation.md file provides a detailed description of how the synthe
 
 - Guidance for reproducing or extending the dataset for further analytics
 
-This documentation ensures that anyone reviewing the project understands the source of the data and can confidently interpret the dashboards and KPIs.
-
 For more details, see [Dataset Generation](documentation/dataset_generation.md).
+
 
 
 
