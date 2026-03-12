@@ -51,17 +51,17 @@ See [portfolio_notes.md](documentation/portfolio_notes.md) for insights, busines
 ## Dashboard Screenshots
 
 - **Page 1 — Clinic Operations Overview**  
-  KPI cards: Total Appointments, No-Show Rate  
-  Visuals: No-Shows by Department & Provider, Appointment Volume Trend
+  **KPI Cards**: Total Appointments, No-Show Rate  
+  **Charts**: No-Shows by Department & Provider, Appointment Volume Trend
 ![Page 1 Overview](documentation/dashboard_images/page1_clinic_operations_overview.png)
 
 - **Page 2 — Provider Performance**  
-  KPI & charts: Provider no-show ranking, appointment volume, department filters
+  **KPI & Charts**: Provider no-show ranking, appointment volume, department filters
 ![Page 2 Provider](documentation/dashboard_images/page2_provider_performance.png)
 
 
 - **Page 3 — Access & Referral Flow**  
-  KPI & charts: Referrals by Department, Referral Leakage %, Referral Volume Trends
+  **KPI & Charts**: Referrals by Department, Referral Leakage %, Referral Volume Trends
 ![Page 3 Referrals](documentation/dashboard_images/page3_referral_access_flow.png)
 
 ---
@@ -80,6 +80,7 @@ See [portfolio_notes.md](documentation/portfolio_notes.md) for insights, busines
 - **Referrals Clean Table** 
 ![Referrals Clean Table 1](documentation/clean_tables/referrals_clean_table_01.png)
 ![Referrals Clean Table 2](documentation/clean_tables/referrals_clean_table_02.png)
+
 
 
 
