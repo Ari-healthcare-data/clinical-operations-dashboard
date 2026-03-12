@@ -81,6 +81,22 @@ See [portfolio_notes.md](documentation/portfolio_notes.md) for insights, busines
 ![Referrals Clean Table 1](documentation/clean_tables/referrals_clean_table_01.png)
 ![Referrals Clean Table 2](documentation/clean_tables/referrals_clean_table_02.png)
 
+---
+
+## Dataset Generation
+
+The dataset_generation.md file provides a detailed description of how the synthetic datasets were created for this project. It includes:
+
+- Formulas and methods for generating each table: **Patients, Providers, Departments, Appointments, Referrals, Financial_Assumptions, Calendar**
+
+- Logic for realistic values such as age distributions, gender ratios, appointment scheduling, provider eligibility, and referral patterns
+
+- Guidance for reproducing or extending the dataset for further analytics
+
+This documentation ensures that anyone reviewing the project understands the source of the data and can confidently interpret the dashboards and KPIs.
+
+For more details, see [Dataset Generation](documentation/dataset_generation.md).
+
 
 
 
