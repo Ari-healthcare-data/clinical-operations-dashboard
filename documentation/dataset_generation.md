@@ -62,11 +62,11 @@ Purpose: Primary key for linking appointments and referrals.
 
 Column: first_name
 Formula/Method: Manually entered gender neutral names
-Purpose: Realistic patient first names for readability.
+Purpose: Realistic provider first names for readability.
 
 Column: last_name
 Formula/Method: Manually entered random last names
-Purpose: Realistic patient surnames.
+Purpose: Realistic provider surnames.
 
 Column: provider_name
 Formula/Method: `=B2 & ", " & C2`
