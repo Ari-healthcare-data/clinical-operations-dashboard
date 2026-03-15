@@ -2,7 +2,7 @@
 -- File: data_validation.sql
 -- Purpose: Validate imported tables and check for missing or duplicate data
 -- Author: Ari M.
--- Date: 2026-03-08
+-- Date: 2026-03-10
 -- Notes: Run after importing CSVs to ensure data integrity
 
 
