@@ -3,7 +3,7 @@
 ## Project Summary
 This project is a **Healthcare Analytics Portfolio** project focused on improving **clinic operational efficiency** through the analysis of appointments and referrals. The dashboard provides actionable KPIs on **attendance, no-show rates, provider performance, and referral management**. 
 
-This project uses a **synthetic healthcare dataset** created to simulate real-world EMR operations, including appointments, referrals, providers, departments, and patients. No real patient information or provider information is used. **All patient and provider names and demographics were ALL created for the synthetic healthcare dataset**. (See [Dataset Generation](documentation/dataset_generation.md))
+This project uses a **synthetic healthcare dataset** created to simulate real-world EMR operations, including appointments, referrals, providers, departments, and patients. No real patient information or provider information is used. **ALL patient and provider names and demographics were ALL created for the synthetic healthcare dataset**. (See [Dataset Generation](documentation/dataset_generation.md))
 
 **Tools & Technologies Used:**
 - PostgreSQL (SQL) for data cleaning, validation, and KPI calculations
