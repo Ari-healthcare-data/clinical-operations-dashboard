@@ -1,4 +1,4 @@
-# Clinical Operations Dashboard – Advanced Healthcare Analytics Project
+# Clinical Operations Dashboard
 
 ## Overview
 
@@ -96,10 +96,10 @@ The referrals table connects completed appointments to specialty care providers,
 
 ## Tools Used
 
-- Excel → data generation
-- PostgreSQL (pgAdmin) → data cleaning and transformation
-- Power BI → dashboard development
-- GitHub → version control and documentation
+- Excel for data generation
+- PostgreSQL (pgAdmin) for data cleaning and transformation
+- Power BI for dashboard development
+- GitHub for version control and documentation
 
 ---
 
