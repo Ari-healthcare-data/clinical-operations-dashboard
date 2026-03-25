@@ -139,3 +139,23 @@ A few principles guiding this project:
 The methodology focuses on building a reliable data pipeline from raw data to final insights.
 
 Rather than treating this as a visualization project, I am approaching it as a full analytics workflow, where each step builds on the previous one.
+
+---
+---
+
+## Phase 1: Data Validation & Initial Review
+
+Before starting analysis, I performed an initial validation step to understand the condition of the dataset and make sure it was ready for downstream work.
+
+This included:
+- Reviewing table structure and relationships
+- Checking for missing or inconsistent values
+- Identifying duplicate records
+- Evaluating date ranges and formatting
+- Confirming that tables can be joined cleanly
+
+This step helped ensure the dataset reflects realistic healthcare operations and highlighted areas that will need cleaning or standardization.
+
+The findings from this phase directly inform the next step: SQL-based data cleaning and transformation.
+
+The next phase focuses on cleaning, standardizing, and preparing the data for analysis using SQL.
