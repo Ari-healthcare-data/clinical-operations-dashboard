@@ -71,7 +71,7 @@ A few decisions I made while building this:
   Instead of generating referrals randomly, I linked them to completed visits to make the workflow more realistic.
 
 - **Controlled randomness**
-  I didn’t fully randomize everything — I tried to guide the randomness so the data still makes sense (for example, keeping a higher percentage of primary care visits).
+  I didn’t fully randomize everything. I tried to guide the randomness so the data still makes sense (for example, keeping a higher percentage of primary care visits).
 
 - **Separate financial assumptions**
   Financial values are stored in a separate table so they can be reused and adjusted easily.
@@ -111,9 +111,42 @@ Instead of just visualizing random data, this setup allows me to:
 - Simulate financial impact (lost revenue, utilization)
 
 ---
+---
+
+## Initial Data Quality Review (Day 2)
+
+After generating the dataset, I took a step back and did an initial validation pass to make sure everything behaves the way a real EMR dataset would.
+
+### What I Checked
+
+- Relationships between tables (patient_id, provider_id, department_id)
+- Missing values in key fields
+- Consistency in categorical variables (e.g., appointment outcomes, insurance types)
+- Date ranges and formatting
+- Numeric ranges (age, risk scores, costs, durations)
+
+### Key Observations
+
+- Some patient records are missing `preferred_contact_method`
+- The `active_months` field in the PROVIDERS table is not standardized (mix of "All Year" and comma-separated values)
+- A duplicate holiday entry (07/04/2024) was identified
+- A small number of records extend into 2025, likely representing future scheduled activity
+- Appointment data reflects realistic behavior (e.g., no-shows with missing check-in times, cancellations)
+
+### Summary
+
+Overall, the dataset is structurally sound and closely mirrors real-world healthcare data.
+
+The issues identified here are either intentional or realistic and will be addressed during the SQL cleaning phase. Keeping them at this stage allows for a more complete and practical demonstration of data preparation and validation.
+
+---
+---
 
 ## Notes
 
 All data in this project is synthetic and created for learning purposes only. No real PHI, patient data or provider data is used. 
 
 For a more detailed breakdown of the column-level logic, formulas, and design decisions used to generate this dataset, see the <br> [Dataset Formulas Reference](dataset_formulas_reference.md).
+
+---
+---
