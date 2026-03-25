@@ -106,7 +106,7 @@ I’m expecting the next phase (SQL and KPIs) to be challenging in a different w
 
 # Day 2 – Dataset Review & Validation
 
-Before jumping into SQL, I wanted to make sure the dataset actually holds up—so today focused on validating structure, relationships, and overall data quality.
+Before jumping into SQL, I wanted to make sure the dataset actually holds up, so today focused on validating structure, relationships, and overall data quality.
 
 I reviewed all tables (patients, providers, appointments, referrals, financials, and calendar data) to understand how everything connects and whether it behaves like a real EMR system.
 
