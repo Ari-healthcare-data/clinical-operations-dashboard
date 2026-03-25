@@ -14,8 +14,8 @@ Rather than listing every formula in full, the focus is on explaining the logic,
 - Emphasis is placed on why the logic was used, not just the formula itself
 - Randomness is intentionally controlled, not purely arbitrary
 - The most important tables for analytics are:
-- Appointments (core operational data)
-- Referrals (workflow and financial impact)
+  - Appointments (core operational data)
+  - Referrals (workflow and financial impact)
 ---
 
 What Makes This Dataset Realistic
