@@ -102,8 +102,9 @@ I’m expecting the next phase (SQL and KPIs) to be challenging in a different w
 
 ---
 ---
+---
 
-## Day 2 – Dataset Review & Validation
+# Day 2 – Dataset Review & Validation
 
 Before jumping into SQL, I wanted to make sure the dataset actually holds up—so today focused on validating structure, relationships, and overall data quality.
 
@@ -152,5 +153,6 @@ This was the point where the dataset started to feel less like something generat
 - Begin exploratory data analysis (EDA)
 - Start identifying key metrics for dashboard development
 
+---
 ---
 ---
