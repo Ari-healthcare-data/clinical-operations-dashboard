@@ -156,3 +156,40 @@ This was the point where the dataset started to feel less like something generat
 ---
 ---
 ---
+
+# Day 3 – Database Setup & Validation
+
+**What I Accomplished**
+
+- Converted structured Excel datasets into CSV files for database ingestion.
+- Resolved formatting issues:
+  - Excel date serial numbers converted to proper date formats.
+  - NULL/blank fields handled correctly.
+  - Quoting, escaping, and delimiter inconsistencies fixed.
+- Created a relational schema in PostgreSQL using pgAdmin 4.
+- Loaded all datasets into corresponding tables successfully.
+- Implemented foreign key constraints to enforce relational integrity:
+  - Patients, Providers, Departments, Appointments, Referrals.
+- Performed validation checks:
+  - Row counts across all tables.
+  - Referential integrity verification.
+- Confirmed database reflects the intended dataset accurately:
+  - Patients: 1001
+  - Providers: 50
+  - Appointments: 3001
+  - Referrals: 801
+  - Supporting tables (Calendar, Holidays, Departments, Financial Assumptions) loaded correctly.
+
+**Challenges / Observations – Day 3**
+
+- Excel converted dates to numeric serials, requiring careful correction.
+- CSV import failures occurred due to mismatched data types.
+- NULL and blank values needed explicit handling for PostgreSQL.
+- CSV formatting (extra commas, quotes, line breaks) caused temporary issues.
+- Ensuring foreign key constraints aligned with CSV structure required iterative debugging.
+- Confirming row counts and relationships reinforced data validation skills.
+- Encountering real-world ETL friction mirrored challenges in enterprise healthcare data workflows.
+
+**Reflection**
+
+Setting up a fully relational database emphasized the importance of clean, well-structured data before analysis. Resolving the CSV to SQL challenges highlighted the attention to detail required in healthcare analytics, and prepared the system for KPI creation and dashboard development in the next phase.
