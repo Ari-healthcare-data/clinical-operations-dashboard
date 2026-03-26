@@ -143,7 +143,7 @@ Rather than treating this as a visualization project, I am approaching it as a f
 ---
 ---
 
-## Phase 1: Data Validation & Initial Review
+## Day 2: Data Validation & Initial Review
 
 Before starting analysis, I performed an initial validation step to understand the condition of the dataset and make sure it was ready for downstream work.
 
@@ -159,3 +159,38 @@ This step helped ensure the dataset reflects realistic healthcare operations and
 The findings from this phase directly inform the next step: SQL-based data cleaning and transformation.
 
 The next phase focuses on cleaning, standardizing, and preparing the data for analysis using SQL.
+
+---
+---
+
+## Day 3: CSV Preparation & Database Upload
+
+After validating the dataset structure on Day 2, I prepared each table for ingestion into PostgreSQL:
+
+### Steps Performed
+
+- Exported each Excel sheet as a UTF-8 encoded CSV file.
+- Standardized column names to match the SQL schema.
+- Converted Excel serial numbers to proper dates (YYYY-MM-DD).
+- Preserved blank cells for SQL NULL values.
+- Ensured proper quoting/escaping to prevent import errors.
+- Verified that relational integrity (foreign key relationships) would be maintained after import.
+
+### Database Import
+
+- Created relational schema in PostgreSQL using pgAdmin 4.
+- Loaded tables in the recommended order:
+  DEPARTMENTS → PROVIDERS → PATIENTS → FINANCIAL_ASSUMPTIONS → CALENDAR → HOLIDAYS → APPOINTMENTS → REFERRALS
+- Implemented foreign key constraints to enforce relationships across tables.
+
+### Challenges Encountered
+
+- Excel date fields converted to numeric serial numbers.
+- Some columns required manual adjustments to match SQL data types.
+- CSV encoding and quoting issues caused temporary import failures.
+- Ensuring NULL/blank fields were correctly interpreted by PostgreSQL.
+
+### Outcome
+
+All datasets were successfully transformed into CSV format and imported into PostgreSQL. The database now fully mirrors the synthetic EMR dataset with proper relational integrity, ready for analytics and KPI development.
+
