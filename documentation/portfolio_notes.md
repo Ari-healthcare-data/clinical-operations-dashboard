@@ -3,7 +3,7 @@
 ---
 ---
 
-# Day 1 Summary
+# Day 1 - Summary
 
 Today I focused on building the dataset that will support the rest of the project. Instead of starting with analysis or dashboards, I spent time designing the structure and making sure the data behaves in a way that makes sense for a clinical setting.
 
@@ -193,3 +193,59 @@ This was the point where the dataset started to feel less like something generat
 **Reflection**
 
 Setting up a fully relational database emphasized the importance of clean, well-structured data before analysis. Resolving the CSV to SQL challenges highlighted the attention to detail required in healthcare analytics, and prepared the system for KPI creation and dashboard development in the next phase.
+
+---
+---
+---
+
+# Day 4 – Analytical Layer & KPI Development
+
+In this phase, I focused on building analytical views on top of the cleaned dataset to prepare for dashboard development.
+
+### What I Worked On
+
+- Created SQL views to support analytics and reporting
+- Developed KPI-focused datasets including:
+  - Patient risk segmentation
+  - Provider workload summaries
+  - Referral SLA performance
+  - Appointment lead time analysis
+  - Department-level metrics
+- Used aggregations and CASE statements to derive meaningful metrics
+- Implemented CTEs to structure complex queries and avoid duplication issues
+
+### Key Observations
+
+- Aggregations require careful handling to avoid double counting when joining multiple tables
+- Pre-aggregating data before joins improves both accuracy and readability
+- Different levels of granularity must be respected when combining datasets
+- Clear separation between raw, cleaned, and analytical layers improves maintainability
+
+### Challenges
+
+- Encountered inflated metrics due to joins across multiple tables
+- Diagnosed the issue as row multiplication caused by many-to-many relationships
+- Resolved the issue by restructuring queries using CTE-based pre-aggregation
+- Ensured consistency between totals in analytical views and base tables
+- Balanced performance considerations with query readability
+
+### What I Learned
+
+- Importance of grain (level of detail) in SQL queries
+- How joins can unintentionally duplicate records
+- How to use CTEs to control aggregation logic
+- How to design queries specifically for dashboard consumption
+- The value of validating aggregated outputs against expected totals
+
+### Minor Observations
+
+- Provider workloads varied realistically (some busier than others)
+- Department-level KPIs reflected expected patterns (Primary Care highest volume)
+- Referral SLA metrics showed plausible variation and some high breach rates
+- Appointment lead times included same-day scheduling and multi-week delays
+- Synthetic dataset is very clean; few anomalies, which is expected for the generated data I created
+
+### Next Step
+
+The project is now ready for visualization. The next phase will focus on building an interactive dashboard using Power BI or Tableau, leveraging these analytical views.
+
