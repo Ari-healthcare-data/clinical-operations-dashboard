@@ -12,18 +12,19 @@ This dataset is fully synthetic and created for learning purposes only. It does 
 
 ## Project Status
 
-On Day 3, I transitioned the dataset from Excel-based generation to a relational database using PostgreSQL (via pgAdmin 4).
+On Day 4, I focused on building the analytical layer of the project by validating, cleaning, and transforming the data into dashboard-ready views.
 
-- Exported Excel sheets into UTF-8 encoded CSV files.
-- Standardized columns and formats to ensure SQL compatibility.
-- Loaded CSVs into PostgreSQL tables according to the schema.
-- Defined primary and foreign key relationships to enforce relational integrity.
-- Verified row counts and validated database integrity.
+- Developed a comprehensive data validation script to check row counts, primary key uniqueness, null values, and referential integrity across all tables.
+Performed data quality checks to identify unrealistic or inconsistent values and reviewed distributions for key fields.
+- Created cleaned views for each core table to standardize fields, handle missing values, and convert flags into analysis-friendly formats.
+- Built analytics views to support key business insights, including provider workload, referral SLA performance, patient risk segmentation, appointment lead time, and department-level summaries.
+- Structured the workflow into separate SQL files (validation, cleaning, analytics) to mirror a modern analytics pipeline approach.
 
-All tables are now fully populated and interconnected through foreign key constraints.
+The dataset is now fully validated, standardized, and transformed into business-ready views that can directly support dashboard development.
 
 Next:
-- SQL analytics queries, KPI tables, dashboard datasets
+
+KPI layer and dashboard development (Power BI)
 
 ---
 
@@ -145,9 +146,54 @@ Clinical-Operations-Dashboard/
 
 ---
 
+## Data Transformation Layers
+
+This project follows a multi-layer data architecture:
+
+### 1. Raw Layer
+- Original dataset stored in Excel format
+- Exported into CSV files for database ingestion
+
+### 2. Database Layer
+- Data loaded into PostgreSQL using pgAdmin 4
+- Tables represent structured relational entities
+
+### 3. Clean Layer (data_cleaning.sql)
+- Created standardized views for analysis
+- Handled missing values using COALESCE
+- Converted categorical flags (Yes/No) into boolean fields
+- Spot checks applied to ensure correctness
+
+### 4. Analytics Layer (analytics_views.sql)
+- Built aggregated views for reporting and dashboards
+- Metrics include:
+  - Provider workload
+  - Department-level summaries
+  - Referral SLA performance
+  - Appointment lead time
+  - Patient risk segmentation
+
+---
+
+## KPI Development
+
+Analytical views were designed to support key healthcare KPIs:
+
+- Appointment completion rate
+- No-show rate
+- Cancellation rate
+- Provider workload distribution
+- Referral SLA breach rate
+- Department utilization metrics
+- Patient risk segmentation
+- Appointment lead time
+
+These KPIs will form the foundation for dashboards in the next phase of the project.
+
+---
+
 ## Next Steps
 
-- Create cleaned tables and KPI views
 - Build Power BI dashboard (multi-page)
 - Summarize insights and recommendations
 
