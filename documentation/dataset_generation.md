@@ -142,6 +142,21 @@ The issues identified here are either intentional or realistic and will be addre
 ---
 ---
 
+## Data Realism (Day 4)
+
+- Appointment distributions reflect realistic patterns: same-day scheduling, multi-week lead times, cancellations, no-shows
+- Risk scoring and referral SLA metrics mimic healthcare operational standards
+- Metrics across departments and providers were validated to ensure realistic workloads and plausible KPI ranges
+- Spot checks were applied to ensure values are consistent and internally logical
+
+### Transition to Analytics
+
+With the database and clean layers established, the dataset is now ready for analytical modeling. The focus shifts from data generation to transformation, aggregation, and insight generation using SQL.
+
+
+---
+---
+
 ## Notes
 
 All data in this project is synthetic and created for learning purposes only. No real PHI, patient data or provider data is used. 
