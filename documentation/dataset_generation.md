@@ -47,7 +47,7 @@ I used Excel formulas to generate the dataset. Most of the logic combines:
 
 Some examples:
 
-- Age is calculated from date of birth instead of randomly assigned
+- Age is calculated from randomized generated date of birth instead of just assiging an age
 - Insurance type is partially based on age (e.g., Medicare for older patients)
 - Appointments are assigned to providers based on specialty and patient age
 - Referrals only come from completed primary care visits to ensure the workflow follows a realistic clinical sequence.
@@ -153,6 +153,28 @@ The issues identified here are either intentional or realistic and will be addre
 
 With the database and clean layers established, the dataset is now ready for analytical modeling. The focus shifts from data generation to transformation, aggregation, and insight generation using SQL.
 
+
+---
+---
+
+## Data Processing (Day 5)
+
+- Raw simulated EMR data was cleaned and normalized into relational tables: Patients, Providers, Appointments, Departments, Referrals.  
+- SQL cleaning scripts were used to fix duplicates, correct patient counts, and categorize appointment outcomes (Completed, Canceled, No-Show).  
+- Aggregated data was exported to CSV files for Power BI visualization.
+
+## Data Validation
+
+- Total Appointments = 3,001  
+- Completed + Canceled + No-Show = 3,001  
+- Total Referrals = 801, SLA Breaches = 464
+- Patient Risk Totals = 1,001 
+
+## Realism Notes
+
+- Same-day appointment rate (~42%), which is higher than typical healthcare systems, which may represent urgent care or open-access scheduling in my model. 
+- Patient risk segmentation only includes patients with appointments.  
+- Metrics were cross-checked for internal consistency across SQL views and Power BI dashboards.
 
 ---
 ---
