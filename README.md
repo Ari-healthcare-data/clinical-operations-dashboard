@@ -10,27 +10,97 @@ This dataset is fully synthetic and created for learning purposes only. It does 
 
 ---
 
-## Project Status
+## Clinical Operations Dashboard
 
-On Day 4, I focused on building the analytical layer of the project by validating, cleaning, and transforming the data into dashboard-ready views.
+### Problem Statement
 
-- Developed a comprehensive data validation script to check row counts, primary key uniqueness, null values, and referential integrity across all tables.
-Performed data quality checks to identify unrealistic or inconsistent values and reviewed distributions for key fields.
-- Created cleaned views for each core table to standardize fields, handle missing values, and convert flags into analysis-friendly formats.
-- Built analytics views to support key business insights, including provider workload, referral SLA performance, patient risk segmentation, appointment lead time, and department-level summaries.
-- Structured the workflow into separate SQL files (validation, cleaning, analytics) to mirror a modern analytics pipeline approach.
+This dashboard was developed to monitor and optimize healthcare operations. It enables clinical managers to track appointment volumes, provider performance, department efficiency, patient risk, and referral workflows.
 
-The dataset is now fully validated, standardized, and transformed into business-ready views that can directly support dashboard development.
+### Dashboard Context
 
-Next:
+This dashboard is designed for internal clinical managers. It provides actionable metrics at provider, department, and operational levels to help identify bottlenecks, optimize workflows, and improve patient access.
 
-KPI layer and dashboard development (Power BI)
+### Dashboard Overview
+
+The report contains five pages:
+
+1. Executive Overview – High-level KPIs and operational summary  
+2. Provider Performance – Provider-level appointment outcomes and workload  
+3. Department Overview – Department-level efficiency and patient distribution  
+4. Referral & SLA Analysis – Specialty referrals, SLA breaches, and revenue impact  
+5. Patient Risk & Access – Risk segmentation and appointment lead times
+
+### Key Metrics & Definitions
+
+- **Total Appointments:** Count of scheduled appointments  
+- **Completed Appointments:** Appointments successfully attended  
+- **Canceled Appointments:** Appointments canceled before the scheduled time  
+- **No-Show Appointments:** Appointments where patients did not attend  
+- **Cancellation Rate:** Canceled / Total Appointments  
+- **No-Show Rate:** No-Show / Total Appointments  
+- **SLA Breach:** Referrals processed later than the expected time threshold  
+- **Revenue Leakage:** Estimated revenue lost due to delayed referrals
+
+### Key Insights
+
+- Primary Care accounts for ~55% of total appointments, driving overall clinic operations.  
+- Overall no-show rate (~11.86%) highlights moderate patient attendance challenges.  
+- Referral SLA breach rate (~57.93%) shows bottlenecks in specialty access.  
+- Cardiology and Dermatology have higher SLA delays and revenue leakage than other departments.  
+- Same-day appointments represent a significant portion (~42%) of total scheduling, possibly reflecting urgent care or open-access scheduling models.
+
+## Dashboard Preview
+
+Below are screenshots of the five Power BI Dashboard pages:
+- Executive Overview  
+- Provider Performance  
+- Department Overview  
+- Referral & SLA Analysis  
+- Patient Risk & Access
+
+### Executive Overview
+
+This page provides a concise, high-level snapshot of clinic operations—covering total appointments, completion rates, cancellations, no-shows, referral volumes, and SLA breach rates. It helps stakeholders quickly understand overall performance and key metrics by department and patient risk category.
+
+![Executive Overview Page](images/dashboard/page_1_executive_overview.png)
+
+<br>
+
+### Provider Performance
+
+This page focuses on individual providers, detailing appointment volumes, cancellation and no-show rates, and workload distribution. Interactive slicers allow readers to filter by provider or specialty, making it easy to identify performance trends and opportunities for improvement.
+
+![Provider Performance Page](images/dashboard/page_2_provider_performance.png)
+
+<br>
+
+### Department Overview
+
+Here, appointment volumes and patient-provider distributions are broken down across clinical departments. It highlights appointment outcomes and department-level summaries to support identifying operational bottlenecks and optimizing resource allocation.
+
+![Department Overview Page](images/dashboard/page_3_department_overview.png)
+
+<br>
+
+### Referral & SLA Analysis
+
+Dedicated to specialty referrals, this page tracks referral volumes, SLA breaches, and their revenue impact by department. It enables stakeholders to monitor access efficiency, pinpoint bottlenecks, and assess financial risks related to delays.
+
+![Referral & SLA Analysis Page](images/dashboard/page_4_referral_and_sla_analysis.png)
+
+<br>
+
+### Patient Risk & Access
+
+This page segments the patient population by risk level and age group, visualizing appointment lead times and demographic patterns. It supports efforts to understand patient access trends and prioritize care based on clinical risk.
+
+![Patient Risk & Access Page](images/dashboard/page_5_patient_risk_and_access.png)
 
 ---
 
 ## Why I Built This
 
-I’m transitioning into a healthcare data/analyst role, and I wanted a project that reflects real-world workflows instead of just isolated datasets.
+I’m transitioning into a healthcare data and analyst fucused role, and I wanted a project that reflects real-world workflows instead of just isolated datasets.
 
 Instead of using a simple dataset, I built a multi-table system (patients, providers, appointments, referrals, etc.) to better understand:
 
@@ -132,7 +202,9 @@ They will be cleaned and standardized in later phases using SQL.
 
 ---
 
-## Project Structure
+## Project Structure 
+
+On my local system is the following folder structure.
 
 ```
 Clinical-Operations-Dashboard/
@@ -189,13 +261,6 @@ Analytical views were designed to support key healthcare KPIs:
 - Appointment lead time
 
 These KPIs will form the foundation for dashboards in the next phase of the project.
-
----
-
-## Next Steps
-
-- Build Power BI dashboard (multi-page)
-- Summarize insights and recommendations
 
 ---
 
