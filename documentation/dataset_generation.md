@@ -112,6 +112,7 @@ Instead of just visualizing random data, this setup allows me to:
 
 ---
 ---
+---
 
 ## Initial Data Quality Review (Day 2)
 
@@ -141,6 +142,7 @@ The issues identified here are either intentional or realistic and will be addre
 
 ---
 ---
+---
 
 ## Data Realism (Day 4)
 
@@ -153,7 +155,7 @@ The issues identified here are either intentional or realistic and will be addre
 
 With the database and clean layers established, the dataset is now ready for analytical modeling. The focus shifts from data generation to transformation, aggregation, and insight generation using SQL.
 
-
+---
 ---
 ---
 
@@ -178,6 +180,7 @@ With the database and clean layers established, the dataset is now ready for ana
 
 ---
 ---
+---
 
 ## Notes
 
@@ -185,5 +188,3 @@ All data in this project is synthetic and created for learning purposes only. No
 
 For a more detailed breakdown of the column-level logic, formulas, and design decisions used to generate this dataset, see the <br> [Dataset Formulas Reference](dataset_formulas_reference.md).
 
----
----
