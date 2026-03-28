@@ -262,3 +262,39 @@ The analytical layer transforms raw transactional data into structured, dashboar
 > After investigating, I realized joins between providers, patients, and appointments were multiplying rows.  
 > Using CTEs and pre-aggregation fixed this issue. This reinforced the importance of query grain and join logic in SQL.
 
+---
+---
+
+## Day 5- Visulizing the Data in Power BI 
+
+### KPI Definitions
+
+- Appointment outcomes are mutually exclusive: Completed, Canceled, or No-Show  
+- Patient counts use DISTINCTCOUNT to avoid duplication across departments  
+- SLA Breach is based on referral processing time exceeding threshold  
+- Revenue calculations are derived from assumed financial values per specialty referral
+
+## Data Modeling Decisions
+
+- Relational structure: Patients, Providers, Appointments, Departments, Referrals  
+- Established primary & foreign key relationships  
+- Created SQL views to separate raw and analytics-ready datasets  
+- Views improve performance, maintainability, and reusability
+
+## Challenges
+
+There were some challenges I encountered today:
+
+- Duplicate patient counts across departments  
+- Ensuring mutually exclusive appointment outcomes  
+- Aligning KPI calculations between SQL and Power BI  
+- Maintaining consistency across multiple dashboard pages
+
+## Solution Methids I Used
+
+- Used DISTINCTCOUNT for patient-level metrics  
+- Implemented CASE statements for clean outcome classification  
+- Validated totals across all views before visualization
+
+---
+---
