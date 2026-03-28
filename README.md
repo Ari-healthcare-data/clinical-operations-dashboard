@@ -36,11 +36,11 @@ I designed this dashboard for internal clinical managers. It provides actionable
 
 The report contains five pages:
 
-1. Executive Overview – High-level KPIs and operational summary  
-2. Provider Performance – Provider-level appointment outcomes and workload  
-3. Department Overview – Department-level efficiency and patient distribution  
-4. Referral & SLA Analysis – Specialty referrals, SLA breaches, and revenue impact  
-5. Patient Risk & Access – Risk segmentation and appointment lead times
+1. **Executive Overview:** High-level KPIs and operational summary  
+2. **Provider Performance:** Provider-level appointment outcomes and workload  
+3. **Department Overview:** Department-level efficiency and patient distribution  
+4. **Referral & SLA Analysis:** Specialty referrals, SLA breaches, and revenue impact  
+5. **Patient Risk & Access:** Risk segmentation and appointment lead times
 
 ### Key Metrics & Definitions
 
