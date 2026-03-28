@@ -14,11 +14,11 @@ This dataset is fully synthetic and created for learning purposes only. It does 
 
 ### Problem Statement
 
-This dashboard was developed to monitor and optimize healthcare operations. It enables clinical managers to track appointment volumes, provider performance, department efficiency, patient risk, and referral workflows.
+I built this dashboard to help clinical teams spot bottlenecks and track key operational metrics. It enables clinical managers to track appointment volumes, provider performance, department efficiency, patient risk, and referral workflows.
 
 ### Dashboard Context
 
-This dashboard is designed for internal clinical managers. It provides actionable metrics at provider, department, and operational levels to help identify bottlenecks, optimize workflows, and improve patient access.
+I designed this dashboard for internal clinical managers. It provides actionable metrics at provider, department, and operational levels to help identify bottlenecks, optimize workflows, and improve patient access.
 
 ### Dashboard Overview
 
@@ -43,11 +43,19 @@ The report contains five pages:
 
 ### Key Insights
 
-- Primary Care accounts for ~55% of total appointments, driving overall clinic operations.  
-- Overall no-show rate (~11.86%) highlights moderate patient attendance challenges.  
+- Primary Care drives most activity (~55% of appointments), which makes sense since it’s the first point of contact for most patients.
+- No-show rate (~12%) is noticeable, which is a reminder that patient attendance can affect clinic efficiency.  
 - Referral SLA breach rate (~57.93%) shows bottlenecks in specialty access.  
 - Cardiology and Dermatology have higher SLA delays and revenue leakage than other departments.  
 - Same-day appointments represent a significant portion (~42%) of total scheduling, possibly reflecting urgent care or open-access scheduling models.
+
+## Challenges & Lessons Learned
+
+Working with this synthetic EMR dataset came with a few challenges. Initially, patient counts were double-counted across departments, which taught me the importance of using DISTINCTCOUNT and validating results at every step.
+
+Defining mutually exclusive appointment outcomes (Completed, Canceled, No-Show) in SQL required careful CASE logic to avoid overlap. Testing these calculations across multiple dashboard pages ensured all KPIs aligned correctly.
+
+I also noticed some referral and scheduling patterns were unrealistic at first. Adjusting the synthetic dataset to better reflect real-world healthcare workflows helped me understand how operational bottlenecks, like referral delays or high no-show rates, impact performance metrics.
 
 ## Dashboard Preview
 
@@ -100,13 +108,15 @@ This page segments the patient population by risk level and age group, visualizi
 
 ## Why I Built This
 
-I’m transitioning into a healthcare data and analyst fucused role, and I wanted a project that reflects real-world workflows instead of just isolated datasets.
+I’m transitioning into a healthcare data and analyst focused role, and I wanted a project that gives me hands-on experience simulating realistic clinical workflows, not just isolated static datasets.
 
 Instead of using a simple dataset, I built a multi-table system (patients, providers, appointments, referrals, etc.) to better understand:
 
 - How clinical data is structured
 - How different parts of the system connect
 - How operational issues (like no-shows or referral leakage) show up in the data
+
+By analyzing referral bottlenecks, I could see how small delays snowball into bigger operational problems, which is something I found fascinating.
 
 ---
 
@@ -154,17 +164,13 @@ The dataset includes:
 - ~3,000 appointments
 - ~800 referrals
 
-## Dataset Overview
+## Dataset Samples
 
 Below is an example of the Patients table used in this project:
 
 ![Patients Table](images/table_samples/patients_table.png)
 
 This table contains simulated demographic and insurance information used for patient segmentation and analysis.
-
----
-
-## Core Tables
 
 ### Appointments Table
 
@@ -204,7 +210,7 @@ They will be cleaned and standardized in later phases using SQL.
 
 ## Project Structure 
 
-On my local system is the following folder structure.
+Here’s the project folder structure on my local machine:
 
 ```
 Clinical-Operations-Dashboard/
@@ -220,7 +226,7 @@ Clinical-Operations-Dashboard/
 
 ## Data Transformation Layers
 
-This project follows a multi-layer data architecture:
+To make the dataset easy to analyze and ensure metrics were accurate, I used a multi-layer data architecture. Each layer serves a clear purpose and makes debugging and KPI validation easier.
 
 ### 1. Raw Layer
 - Original dataset stored in Excel format
@@ -235,6 +241,8 @@ This project follows a multi-layer data architecture:
 - Handled missing values using COALESCE
 - Converted categorical flags (Yes/No) into boolean fields
 - Spot checks applied to ensure correctness
+
+I personally prefer separating cleaning from analytics because it makes it easier to troubleshoot complex metrics. This lets me to validate each metric step-by-step before using them in Power BI, which reduced errors and made the workflow more maintainable.
 
 ### 4. Analytics Layer (analytics_views.sql)
 - Built aggregated views for reporting and dashboards
@@ -260,7 +268,7 @@ Analytical views were designed to support key healthcare KPIs:
 - Patient risk segmentation
 - Appointment lead time
 
-These KPIs will form the foundation for dashboards in the next phase of the project.
+I designed these KPIs so the dashboards could give a clear picture of clinic performance.
 
 ---
 
