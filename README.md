@@ -11,6 +11,7 @@
 - [Dataset Formulas Reference](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard/blob/main/documentation/dataset_formulas_reference.md#dataset-formulas-reference)
 - [Methodology](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard/blob/main/documentation/methodology.md#methodology)
 - [Portfolio Notes](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard/blob/main/documentation/portfolio_notes.md#portfolio-notes)
+- [Report](https://github.com/Ari-healthcare-data/Clinical-Operations-Dashboard/blob/ffd755c78cd8f642ac347b222f4ae9abd8db0862/reports/Clinical%20Operations%20Dashboard%20Report.pdf)
 
 ## Overview
 
